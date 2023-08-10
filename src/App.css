@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.class1 {
+  border: solid blue;
+  padding: 25px;
+  margin: 10px;
+  box-shadow: 5px 5px 25px 2px red;
+}
+
+.class2 {
+  border: solid blue;
+  
+}
