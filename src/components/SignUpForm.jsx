@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function SignUpForm() {
+export default function SignUpForm({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -24,10 +24,11 @@ export default function SignUpForm() {
       const result = await response.json();
       console.log(result);
       
-      // Reset the error state
+      
+      setToken(result.token);
+     
       setError(null);
     } catch (error) {
-      // Handle network request error
       setError(error.message);
     }
   }
@@ -53,6 +54,7 @@ export default function SignUpForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
         </label>
         <br />
