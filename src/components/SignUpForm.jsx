@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function SignUpForm({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
